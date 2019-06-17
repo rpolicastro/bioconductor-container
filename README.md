@@ -11,7 +11,7 @@ singularity pull shub://rpolicastro/bioconductor-container
 3. Activate the container.
 ```
 singularity shell \
--e -c \
+-e -C \
 -B directory1, directory2, ... \
 bioconductor-container_latest.sif
 ```
