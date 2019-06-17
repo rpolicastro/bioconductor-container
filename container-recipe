@@ -10,7 +10,7 @@ export PATH=$PATH:/opt/conda/bin
 conda update -n base -y -c defaults conda
 
 ## Create environment
-conda create -n bioconductor -y -c conda-forge -c bioconda -y \
+conda create -n bioconductor -y -c conda-forge -c bioconda \
 r-tidyverse \
 r-getopt \
 r-devtools \
