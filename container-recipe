@@ -1,0 +1,39 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%post
+
+## Add conda to path
+export PATH=$PATH:/opt/conda/bin
+
+## Update conda
+conda update -n base -y -c defaults conda
+
+## Create environment
+conda create -n bioconductor -y -c conda-forge -c bioconda -y \
+r-tidyverse \
+r-getopt \
+r-devtools \
+r-roxygen2 \
+bioconductor-tsrchitect \
+bioconductor-genomicranges \
+bioconductor-genomicfeatures \
+bioconductor-rtracklayer \
+bioconductor-chipseeker \
+bioconductor-clusterprofiler \
+bioconductor-gviz \
+bioconductor-biomart \
+bioconductor-edger \
+bioconductor-deseq2 \
+bioconductor-rsubread \
+bioconductor-rsamtools \
+bioconductor-annotationhub \
+bioconductor-reactomepa \
+bioconductor-dose \
+bioconductor-diffbind
+
+## Update environment
+conda update -n bioconductor -y -c conda-forge -c bioconda --all
+
+## Clean up extra files
+conda clean --all
