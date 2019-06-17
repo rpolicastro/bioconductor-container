@@ -3,6 +3,8 @@ Singularity container with some useful bioconductor software
 
 ## Getting Started
 
+[Install Singularity](https://www.sylabs.io/docs/).
+
 Clone the repository 
 ```
 git clone https://github.com/rpolicastro/singularity.git
