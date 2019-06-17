@@ -16,6 +16,7 @@ singularity shell \
 bioconductor-container_latest.sif
 ```
 The -B option lets you specify the directories you will be working with in a comma separated format.
+
 4. Activate the conda environment.
 ```
 source activate bioconductor
